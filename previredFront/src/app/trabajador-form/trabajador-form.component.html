@@ -1,0 +1,73 @@
+
+<div class="form-container">
+    <div class="form-box">
+      <div class="form-header">
+        <h2>Crear Trabajador</h2>
+      </div>
+      <div class="form-body">
+        <div class="form-field">
+            <label *ngIf="showIdInput" for="idTrabajador">ID del Trabajador a Actualizar:</label>
+            <input *ngIf="showIdInput" type="text" id="idTrabajador" name="idTrabajador" [(ngModel)]="trabajador.id">
+        </div>
+        <div class="form-field">
+          <label for="rut">RUT:</label>
+          <input type="text" id="rut" name="rut" [(ngModel)]="trabajador.rut">
+        </div>
+        <div class="form-field">
+          <label for="nombre">nombre:</label>
+          <input type="text" id="nombre" name="nombre" [(ngModel)]="trabajador.nombre">
+        </div>
+        <div class="form-field">
+            <label for="apellidoPaterno">apellidoPaterno:</label>
+            <input type="text" id="apellidoPaterno" name="apellidoPaterno" [(ngModel)]="trabajador.apellidoPaterno">
+          </div>
+          <div class="form-field">
+            <label for="apellidoMaterno">apellidoMaterno:</label>
+            <input type="text" id="apellidoMaterno" name="apellidoMaterno" [(ngModel)]="trabajador.apellidoMaterno">
+          </div>
+          <div class="form-field">
+            <label for="nombre">direccionFisica:</label>
+            <input type="text" id="direccionFisica" name="direccionFisica" [(ngModel)]="trabajador.direccionFisica">
+          </div>
+          <div class="form-field">
+            <label for="nombre">empresa:</label>
+            <input type="text" id="empresa" name="empresa" [(ngModel)]="trabajador.empresa.id">
+          </div>
+
+         <div class="button-group">
+            <button (click)="createTrabajador()">Crear Trabajador</button>
+            <button *ngIf="!showIdInput" (click)="toggleIdInput()">Actualizar Trabajador</button>
+            <button *ngIf="showIdInput" (click)="updateTrabajador()">Actualizar Trabajador</button>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="table-container">
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Rut</th>
+            <th class="text-center">nombre</th>
+            <th class="text-center">Empresa</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let trabajador of trabajadores">
+            <td class="text-center">{{ trabajador.id }}</td>
+            <td class="text-center">{{ trabajador.rut }}</td>
+            <td class="text-center">{{ trabajador.nombre }}</td>
+            <td class="text-center">{{ trabajador.empresa.id }}</td>
+            <td class="text-center">
+              <button (click)="confirmDelete(trabajador.id)" class="btn btn-danger" type="button">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  

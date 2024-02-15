@@ -1,0 +1,101 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  }
+  
+  .form-box {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-end; /* Para alinear los botones a la derecha del contenedor */
+  }
+  
+  .button-group button {
+    margin-left: 10px; /* Espacio entre botones */
+  }
+  
+  
+    .form-header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    
+    .form-header h2 {
+      margin: 0;
+    }
+    
+    .form-body {
+      padding: 20px;
+    }
+    
+    .form-field {
+      margin-bottom: 15px;
+    }
+    
+    button {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #c82333;
+    }
+  
+    .form-container, .table-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    }
+    
+    .form-box, .table-box {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .table-box {
+      width: 600px; /* Ajusta el ancho de la tabla según sea necesario */
+    }
+    
+    .table-box table {
+      width: 100%;
+    }
+    
+    .table-box th, .table-box td {
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .table-box th {
+      background-color: #f2f2f2;
+    }
+    
+    .table-box tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    .table-box tr:hover {
+      background-color: #ddd;
+    }
+    
+    

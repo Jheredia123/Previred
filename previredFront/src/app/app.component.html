@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="menu">
+    <ul>
+      <li (click)="toggleEmpresaForm()" [class.active]="empresaFormEnabled">Mostrar Formulario de Empresa</li>
+      <li (click)="toggleTrabajadorForm()" [class.active]="trabajadorFormEnabled">Mostrar Formulario de Trabajador</li>
+    </ul>
+  </div>
+
+  <div class="form-container">
+    <div *ngIf="empresaFormEnabled">
+      <app-empresa-form></app-empresa-form>
+    </div>
+    <div *ngIf="trabajadorFormEnabled">
+      <app-trabajador-form></app-trabajador-form>
+    </div>
+  </div>
+</div>

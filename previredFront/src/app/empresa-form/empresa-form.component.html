@@ -1,0 +1,55 @@
+
+<div class="container">
+  <div class="form-container">
+    <div class="form-box">
+      <div class="form-header">
+        <h2>Crear Empresa</h2>
+      </div>
+      <div class="form-body">
+        <div class="form-field">
+          <label *ngIf="showIdInput" for="idEmpresa">ID de la Empresa a Actualizar:</label>
+          <input *ngIf="showIdInput" type="text" id="idEmpresa" name="idEmpresa" [(ngModel)]="empresa.id">
+      </div>
+        <div class="form-field">
+          <label for="rut">RUT:</label>
+          <input type="text" id="rut" name="rut" [(ngModel)]="empresa.rut">
+        </div>
+        <div class="form-field">
+          <label for="razonSocial">Razón Social:</label>
+          <input type="text" id="razonSocial" name="razonSocial" [(ngModel)]="empresa.razonSocial">
+        </div>
+        <div class="button-group">
+          <button (click)="createEmpresa()">Crear Empresa</button>
+          <button *ngIf="!showIdInput" (click)="toggleIdInput()">Actualizar Empresa</button>
+          <button *ngIf="showIdInput" (click)="updateEmpresa()">Actualizar Empresa</button>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Rut</th>
+            <th class="text-center">Razon social</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empresa of empresas">
+            <td class="text-center">{{ empresa.id }}</td>
+            <td class="text-center">{{ empresa.rut }}</td>
+            <td class="text-center">{{ empresa.razonSocial }}</td>
+            <td class="text-center">
+              <button (click)="confirmDelete(empresa.id)" class="btn btn-danger" type="button">X</button>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

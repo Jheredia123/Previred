@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu ul li.active {
+  background-color: #ccc;
+}
+
+.form-container {
+  margin-top: 20px;
+}
