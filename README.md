@@ -1,4 +1,8 @@
-Proyecto Java 1.8 crud de empresa y trabajador
+para el backend p se realizó un proyecto Java 1.8 crud de empresa y trabajador,
+para el consumo de las api se realizó un proyecto angular. 
+
+Levantar el proyecto con los siguientes pasos 
+Crear un eschema en la base de datos postgrest con el siguiente script:
 
 ------------------------------------------------------------------------------------------------------------
 Scrip BD
@@ -38,6 +42,8 @@ VALUES ('11111111-2', 'Juan', 'Perez', 'González', 'Calle 123', 1);
 
 -------------------------------------------------------------------------------------------------------------------
 
+importar el proyecto maven java con nombre Previred 
+(Cambiar JDK 1.8) y Levantar el server.
 
 
 Apis

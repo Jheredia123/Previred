@@ -32,7 +32,7 @@ export class TrabajadorService {
   }
 
   deleteTrabajadores(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/eliminarTrabajador/${id}`);
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
     
   }
 
